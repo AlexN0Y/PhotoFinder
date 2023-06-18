@@ -20,7 +20,6 @@ final class DefaultNetworkService: NetworkService {
     
     func request<Request: DataRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void) {
     
-        // 3
         guard var urlComponent = URLComponents(string: request.url) else {
             let error = NSError(
                 domain: ErrorResponse.invalidEndpoint.rawValue,

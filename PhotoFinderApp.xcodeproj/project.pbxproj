@@ -19,6 +19,8 @@
 		DFC111442A3781CE00966541 /* MainPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC111422A3781CE00966541 /* MainPageViewController.storyboard */; };
 		DFC111462A3781CF00966541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC111452A3781CF00966541 /* Assets.xcassets */; };
 		DFC111492A3781CF00966541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC111472A3781CF00966541 /* LaunchScreen.storyboard */; };
+		DFFDBD852A3F44B2001922AA /* ChosenCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFDBD842A3F44B2001922AA /* ChosenCategoryViewController.swift */; };
+		DFFDBD872A3F44CC001922AA /* ChosenCategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFFDBD862A3F44CC001922AA /* ChosenCategoryViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		DFC111452A3781CF00966541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC111482A3781CF00966541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFC1114A2A3781CF00966541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFFDBD842A3F44B2001922AA /* ChosenCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenCategoryViewController.swift; sourceTree = "<group>"; };
+		DFFDBD862A3F44CC001922AA /* ChosenCategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChosenCategoryViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		DFC1113B2A3781CE00966541 /* PhotoFinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				DFFDBD832A3F448C001922AA /* Chosen category */,
 				DF151FCE2A3E78180072BE60 /* NetworkLayer */,
 				DF151FCD2A3E6F4B0072BE60 /* MainPage */,
 				DF151FC22A3E6E460072BE60 /* Category */,
@@ -115,6 +120,15 @@
 				DFC1114A2A3781CF00966541 /* Info.plist */,
 			);
 			path = PhotoFinderApp;
+			sourceTree = "<group>";
+		};
+		DFFDBD832A3F448C001922AA /* Chosen category */ = {
+			isa = PBXGroup;
+			children = (
+				DFFDBD842A3F44B2001922AA /* ChosenCategoryViewController.swift */,
+				DFFDBD862A3F44CC001922AA /* ChosenCategoryViewController.storyboard */,
+			);
+			path = "Chosen category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,7 @@
 				DFC111442A3781CE00966541 /* MainPageViewController.storyboard in Resources */,
 				DF151FCC2A3E6EF80072BE60 /* SearchViewController.storyboard in Resources */,
 				DF151FC82A3E6EC30072BE60 /* CategoryViewController.storyboard in Resources */,
+				DFFDBD872A3F44CC001922AA /* ChosenCategoryViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +207,7 @@
 			files = (
 				DF151FCA2A3E6EE80072BE60 /* SearchViewController.swift in Sources */,
 				DF151FC52A3E6E840072BE60 /* CategoryViewController.swift in Sources */,
+				DFFDBD852A3F44B2001922AA /* ChosenCategoryViewController.swift in Sources */,
 				DFC111412A3781CE00966541 /* MainPageViewController.swift in Sources */,
 				DF151FD02A3E78AE0072BE60 /* DataRequest.swift in Sources */,
 				DFC1113D2A3781CE00966541 /* AppDelegate.swift in Sources */,
