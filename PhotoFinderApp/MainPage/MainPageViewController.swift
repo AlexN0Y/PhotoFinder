@@ -1,17 +1,16 @@
 //
 //  ViewController.swift
-//  EcommerceApp
+//  PhotoFinderApp
 //
 //  Created by Alex Gav on 12.06.2023.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
 
