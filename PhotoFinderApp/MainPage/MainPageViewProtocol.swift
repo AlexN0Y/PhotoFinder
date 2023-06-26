@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol MainPageView: AnyObject {
+protocol MainPageViewProtocol: AnyObject {
     func setNavigationTitle(title: String)
 }

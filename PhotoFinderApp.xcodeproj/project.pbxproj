@@ -11,6 +11,7 @@
 		DF151FC82A3E6EC30072BE60 /* CategoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF151FC72A3E6EC30072BE60 /* CategoryViewController.storyboard */; };
 		DF151FD02A3E78AE0072BE60 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF151FCF2A3E78AE0072BE60 /* DataRequest.swift */; };
 		DF151FD22A3E78E00072BE60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF151FD12A3E78E00072BE60 /* NetworkService.swift */; };
+		DF47F3902A49A05B0080570E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47F38F2A49A05B0080570E /* UIViewController+Extension.swift */; };
 		DF94DF432A43064A00247402 /* PhotosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF94DF422A43064A00247402 /* PhotosRequest.swift */; };
 		DFC1113D2A3781CE00966541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1113C2A3781CE00966541 /* AppDelegate.swift */; };
 		DFC1113F2A3781CE00966541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1113E2A3781CE00966541 /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 		DF151FC72A3E6EC30072BE60 /* CategoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryViewController.storyboard; sourceTree = "<group>"; };
 		DF151FCF2A3E78AE0072BE60 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		DF151FD12A3E78E00072BE60 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DF47F38F2A49A05B0080570E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DF94DF422A43064A00247402 /* PhotosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequest.swift; sourceTree = "<group>"; };
 		DFC111392A3781CE00966541 /* PhotoFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1113C2A3781CE00966541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		DF47F38E2A49A0370080570E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF47F38F2A49A05B0080570E /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		DFAD5AC52A4336BB007EC0FF /* Image View */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		DFC1113B2A3781CE00966541 /* PhotoFinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				DF47F38E2A49A0370080570E /* Extensions */,
 				DFC4B5252A4502A100F916A2 /* UIElements */,
 				DFAD5AC52A4336BB007EC0FF /* Image View */,
 				DFFDBD832A3F448C001922AA /* Chosen category */,
@@ -242,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC4B52E2A450D3600F916A2 /* MainPagePresenter.swift in Sources */,
+				DF47F3902A49A05B0080570E /* UIViewController+Extension.swift in Sources */,
 				DF94DF432A43064A00247402 /* PhotosRequest.swift in Sources */,
 				DF151FC52A3E6E840072BE60 /* CategoryViewController.swift in Sources */,
 				DFC4B52C2A450D1200F916A2 /* MainPageViewProtocol.swift in Sources */,
