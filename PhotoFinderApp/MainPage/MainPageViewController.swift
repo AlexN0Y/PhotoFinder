@@ -51,8 +51,7 @@ class MainPageViewController: UIViewController {
     }
     
     @objc private func listButtonTapped() {
-        let categoryStoryboard = UIStoryboard(name: String(describing: CategoryViewController.self), bundle: nil)
-        let categoryViewController = categoryStoryboard.instantiateViewController(withIdentifier: String(describing: CategoryViewController.self)) as! CategoryViewController
+        let categoryViewController = CategoryViewController.instantiate()
         self.navigationController?.pushViewController(categoryViewController, animated: true)
     }
     
