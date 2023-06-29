@@ -8,11 +8,7 @@
 import UIKit
 
 class MainPageViewController: UIViewController {
-    @IBOutlet private weak var collectionView: UICollectionView! {
-        didSet {
-
-        }
-    }
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     //here
     var searchController = UISearchController(searchResultsController: nil)
@@ -55,8 +51,7 @@ class MainPageViewController: UIViewController {
     }
     
     @objc private func listButtonTapped() {
-        let categoryStoryboard = UIStoryboard(name: String(describing: CategoryViewController.self), bundle: nil)
-        let categoryViewController = categoryStoryboard.instantiateViewController(withIdentifier: String(describing: CategoryViewController.self)) as! CategoryViewController
+        let categoryViewController = CategoryViewController.instantiate()
         self.navigationController?.pushViewController(categoryViewController, animated: true)
     }
     
@@ -86,6 +81,11 @@ extension MainPageViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 140)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let imageVC = ImageViewController.instantiate()
+        self.navigationController?.pushViewController(imageVC, animated: true)
     }
     
 }

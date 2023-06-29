@@ -24,11 +24,11 @@
                                 <rect key="frame" x="0.0" y="0.99999999999999822" width="100" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Uag-Gp-Dud"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="140" id="VEO-sU-U7a"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="VEO-sU-U7a"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z0-8e-FR5">
-                                <rect key="frame" x="0.0" y="40.333333333333343" width="100" height="20.333333333333329"/>
+                                <rect key="frame" x="0.0" y="40.333333333333336" width="100" height="20.333333333333336"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="neH-o8-fWW"/>
                                 </constraints>
