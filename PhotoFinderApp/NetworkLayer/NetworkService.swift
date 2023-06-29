@@ -11,7 +11,6 @@ enum ErrorResponse: String, Error {
     case invalidEndpoint = "Invalid Endpoint"
 }
 
-
 protocol NetworkService {
     func request<Request: DataRequest>(_ request: Request, completion: @escaping (Result<Request.Response, Error>) -> Void)
 }
