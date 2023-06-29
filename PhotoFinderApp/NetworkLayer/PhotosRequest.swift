@@ -13,7 +13,7 @@ private let unsplashAPIKey = "api_key"
 
 struct PhotosRequest: DataRequest {
 
-    typealias Response = [Any]
+    typealias Response = [UnsplashPhoto]
     
     var url: String {
         return baseURL + "/photos"
@@ -24,15 +24,12 @@ struct PhotosRequest: DataRequest {
     }
 
     var headers: [String : String] {
-        ["Authorization": "Client-ID \(unsplashAPIKey)"]
+        ["Authorization": "Client-ID \(GlobalConstants.accessKey ?? "")"]
     }
 
     var queryItems: [String : String] {
         [:]
     }
     
-    func decode(_ data: Data) throws -> [Any] {
-        return []
-    }
-    
 }
+
