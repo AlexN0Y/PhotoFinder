@@ -24,6 +24,10 @@ class ImageViewController: UIViewController {
                 print("error")
             }
         }
+        photoView.isUserInteractionEnabled = true
+        let interaction = UIContextMenuInteraction(delegate: self)
+        photoView.addInteraction(interaction)
+
     }
     
     private func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
@@ -42,6 +46,31 @@ class ImageViewController: UIViewController {
                     completion(nil)
                 }
             }
+        }
+    }
+}
+
+extension ImageViewController: UIContextMenuInteractionDelegate {
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { suggestedActions in
+            let save = UIAction(title: "Save Image", image: UIImage(systemName: "square.and.arrow.down")) { action in
+                if let image = self.photoView.image {
+                    UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+                }
+            }
+            return UIMenu(title: "", children: [save])
+        }
+    }
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
         }
     }
 }
