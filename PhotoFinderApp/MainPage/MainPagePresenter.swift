@@ -7,25 +7,37 @@
 
 import Foundation
 
-class MainPagePresenter {
-    weak var view: MainPageViewProtocol?
+class MainPagePresenter: MainPageViewPresenter {
     
-    var numberOfCells: Int {
-        return 30
+    weak var view: MainPageView?
+    let networkService = DefaultNetworkService()
+    var photos: [UnsplashPhoto] = []
+
+    required init(view: MainPageView) {
+        self.view = view
     }
     
-    func viewDidLoad() {
+    func getPhotos() {
+        let request = PhotosRequest()
+        networkService.request(request) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let photos):
+                    self?.photos = photos
+                    self?.view?.reloadCollectionView()
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
     
-    func updateSearchResults(for text: String?) {
+    func numberOfPhotos() -> Int {
+        return photos.count
     }
     
-    func cancelButtonClicked() {
-    }
-    
-    func cellData(for index: Int) -> String {
-        // Get cell data
-        return "Cell Data"
+    func photoAtIndex(_ index: Int) -> UnsplashPhoto? {
+        return photos[index]
     }
 }
 

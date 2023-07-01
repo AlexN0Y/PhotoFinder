@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MainPageViewController: UIViewController {
-    @IBOutlet private weak var collectionView: UICollectionView!
+class MainPageViewController: UIViewController, MainPageView {
     
-    //here
-    var searchController = UISearchController(searchResultsController: nil)
+    @IBOutlet private weak var collectionView: UICollectionView!
+    private var searchController = UISearchController(searchResultsController: nil)
+    var presenter: MainPageViewPresenter?
     private enum Constants {
         static let title = "Main"
         static let searchViewController = "SearchViewControllerv"
@@ -29,20 +29,39 @@ class MainPageViewController: UIViewController {
         navigationItem.rightBarButtonItem = searchBarButtonItem
         let listBarButtonItem = UIBarButtonItem(image: UIImage(systemName: Constants.listImage), style: .plain, target: self, action: #selector(listButtonTapped))
         navigationItem.leftBarButtonItem = listBarButtonItem
-        //
+        setSearchController()
+        configureCollectionView()
+        presenter = MainPagePresenter(view: self)
+        presenter?.getPhotos()
+    }
+    
+    func reloadCollectionView() {
+        collectionView.reloadData()
+    }
+    
+    private func setSearchController() {
         searchController.searchResultsUpdater = self
             searchController.obscuresBackgroundDuringPresentation = false
             searchController.searchBar.placeholder = "Search here..."
             searchController.searchBar.delegate = self
             definesPresentationContext = true
+    }
+    
+    private func configureCollectionView() {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
-        collectionView.delegate = self
+        let width = UIScreen.main.bounds.width
+        let cellWidth = (width - 21) / 2.0
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
+        
+        layout.minimumInteritemSpacing = 5
+        layout.minimumLineSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+        collectionView.collectionViewLayout = layout
+        
         collectionView.dataSource = self
-        
-
-        let nib = UINib(nibName: "PhotoCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: Constants.imageCellIdentifier)
-        
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: Constants.imageCellIdentifier, bundle: nil), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
     }
     
     
@@ -71,21 +90,23 @@ extension MainPageViewController: UISearchResultsUpdating, UISearchBarDelegate {
 
 extension MainPageViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Constants.numberOfCells
+        return presenter?.numberOfPhotos() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCellIdentifier, for: indexPath) as! PhotoCell
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 140)
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCellIdentifier, for: indexPath) as? PhotoCell, let photo = presenter?.photoAtIndex(indexPath.row) {
+            cell.configure(photoData: photo)
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imageVC = ImageViewController.instantiate()
-        self.navigationController?.pushViewController(imageVC, animated: true)
+        if let imageVC = ImageViewController.instantiate() as? ImageViewController, let photo = presenter?.photoAtIndex(indexPath.row) {
+            imageVC.photo = photo
+            self.navigationController?.pushViewController(imageVC, animated: true)
+        }
+
     }
     
 }
