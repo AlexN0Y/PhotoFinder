@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="348" height="702"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0kf-ar-eIs">
-                                <rect key="frame" x="164.33333333333334" y="1" width="19.666666666666657" height="398.66666666666669"/>
+                                <rect key="frame" x="164" y="1" width="20" height="398.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="VEO-sU-U7a"/>
                                 </constraints>
@@ -41,8 +41,10 @@
                             <constraint firstItem="6Z0-8e-FR5" firstAttribute="leading" secondItem="aLw-cj-20h" secondAttribute="leading" id="15s-Pz-8IE"/>
                             <constraint firstItem="0kf-ar-eIs" firstAttribute="top" secondItem="aLw-cj-20h" secondAttribute="top" id="Ejc-HE-B2O"/>
                             <constraint firstAttribute="bottom" secondItem="6Z0-8e-FR5" secondAttribute="bottom" id="ObF-ou-qwo"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0kf-ar-eIs" secondAttribute="trailing" id="ZFX-0s-Opx"/>
                             <constraint firstAttribute="trailing" secondItem="6Z0-8e-FR5" secondAttribute="trailing" id="aJ9-aP-R5v"/>
                             <constraint firstItem="6Z0-8e-FR5" firstAttribute="top" secondItem="0kf-ar-eIs" secondAttribute="bottom" constant="10" id="c0A-JG-4On"/>
+                            <constraint firstItem="0kf-ar-eIs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aLw-cj-20h" secondAttribute="leading" id="gtq-Ll-2i2"/>
                             <constraint firstItem="0kf-ar-eIs" firstAttribute="centerX" secondItem="aLw-cj-20h" secondAttribute="centerX" id="woM-yF-qhg"/>
                         </constraints>
                     </view>

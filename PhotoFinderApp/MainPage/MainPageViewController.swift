@@ -18,7 +18,6 @@ class MainPageViewController: UIViewController, MainPageView {
         static let categoryViewController = "CategoryViewController"
         static let listImage = "list.bullet"
         static let imageCellIdentifier = "PhotoCell"
-        static let numberOfCells = 30
     }
     
     
@@ -106,7 +105,6 @@ extension MainPageViewController: UICollectionViewDataSource, UICollectionViewDe
             imageVC.photo = photo
             self.navigationController?.pushViewController(imageVC, animated: true)
         }
-
     }
     
 }

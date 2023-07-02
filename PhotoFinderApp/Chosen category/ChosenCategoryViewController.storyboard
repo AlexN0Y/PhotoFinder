@@ -11,13 +11,13 @@
         <!--Chosen Category View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ChosenCategoryViewController" customModule="PhotoFinderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChosenCategoryViewController" id="Y6W-OH-hqX" customClass="ChosenCategoryViewController" customModule="PhotoFinderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rSX-JX-7n3">
-                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <rect key="frame" x="16" y="59" width="377" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Al3-hk-xWI">
                                     <size key="itemSize" width="128" height="128"/>
@@ -31,12 +31,15 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rSX-JX-7n3" secondAttribute="trailing" constant="16" id="NNs-de-fGJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rSX-JX-7n3" secondAttribute="trailing" id="NNs-de-fGJ"/>
                             <constraint firstItem="rSX-JX-7n3" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Sp2-2q-W4m"/>
                             <constraint firstItem="rSX-JX-7n3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ZUr-PQ-T63"/>
                             <constraint firstItem="rSX-JX-7n3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rI3-I4-Sg6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rSX-JX-7n3" id="f7U-1U-y6M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

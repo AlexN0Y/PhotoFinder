@@ -17,6 +17,7 @@
 		DF151FD22A3E78E00072BE60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF151FD12A3E78E00072BE60 /* NetworkService.swift */; };
 		DF47F3902A49A05B0080570E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47F38F2A49A05B0080570E /* UIViewController+Extension.swift */; };
 		DF94DF432A43064A00247402 /* PhotosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF94DF422A43064A00247402 /* PhotosRequest.swift */; };
+		DFA773FC2A50FB180084DCB7 /* UnsplashSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA773FB2A50FB180084DCB7 /* UnsplashSearchRequest.swift */; };
 		DFC1113D2A3781CE00966541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1113C2A3781CE00966541 /* AppDelegate.swift */; };
 		DFC1113F2A3781CE00966541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1113E2A3781CE00966541 /* SceneDelegate.swift */; };
 		DFC111412A3781CE00966541 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC111402A3781CE00966541 /* MainPageViewController.swift */; };
@@ -44,6 +45,7 @@
 		DF151FD12A3E78E00072BE60 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DF47F38F2A49A05B0080570E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DF94DF422A43064A00247402 /* PhotosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRequest.swift; sourceTree = "<group>"; };
+		DFA773FB2A50FB180084DCB7 /* UnsplashSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashSearchRequest.swift; sourceTree = "<group>"; };
 		DFC111392A3781CE00966541 /* PhotoFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1113C2A3781CE00966541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC1113E2A3781CE00966541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				DF151FCF2A3E78AE0072BE60 /* DataRequest.swift */,
 				DF151FD12A3E78E00072BE60 /* NetworkService.swift */,
 				DF94DF422A43064A00247402 /* PhotosRequest.swift */,
+				DFA773FB2A50FB180084DCB7 /* UnsplashSearchRequest.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -156,11 +159,11 @@
 		DFC1113B2A3781CE00966541 /* PhotoFinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				DFAD5AC52A4336BB007EC0FF /* Image View */,
 				DF0B28922A4CDFA7004528C9 /* Constants */,
 				DF0B288F2A4CDEE4004528C9 /* Models */,
 				DF47F38E2A49A0370080570E /* Extensions */,
 				DFC4B5252A4502A100F916A2 /* UIElements */,
-				DFAD5AC52A4336BB007EC0FF /* Image View */,
 				DFFDBD832A3F448C001922AA /* Chosen category */,
 				DF151FCE2A3E78180072BE60 /* NetworkLayer */,
 				DF151FCD2A3E6F4B0072BE60 /* MainPage */,
@@ -281,6 +284,7 @@
 				DF0B28912A4CDEF8004528C9 /* UnsplashPhoto.swift in Sources */,
 				DF47F3902A49A05B0080570E /* UIViewController+Extension.swift in Sources */,
 				DF94DF432A43064A00247402 /* PhotosRequest.swift in Sources */,
+				DFA773FC2A50FB180084DCB7 /* UnsplashSearchRequest.swift in Sources */,
 				DF151FC52A3E6E840072BE60 /* CategoryViewController.swift in Sources */,
 				DF0B288E2A4CD575004528C9 /* MainPagePresenterProtocol.swift in Sources */,
 				DFFDBD852A3F44B2001922AA /* ChosenCategoryViewController.swift in Sources */,

@@ -9,19 +9,27 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet private weak var photoView: UIImageView!
+    @IBOutlet private weak var photoView: UIImageView! {
+        didSet {
+            photoView.clipsToBounds = true
+        }
+    }
     @IBOutlet private weak var titleLabel: UILabel!
+
+
     
     func configure(photoData: UnsplashPhoto) {
         loadImage(from: photoData.urls.small) { image in
             if let image = image {
                 self.photoView.image = image
+                self.setNeedsLayout()
+                self.layoutIfNeeded()
             } else {
                 print("error")
             }
         }
         DispatchQueue.main.async {
-            self.titleLabel.text = "Photo Photo Photo Photo Photo v vPhoto Photo"
+            self.titleLabel.text = photoData.description
         }
     }
     

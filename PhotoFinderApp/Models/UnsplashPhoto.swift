@@ -15,6 +15,7 @@ struct UnsplashPhoto: Decodable {
     let urls: PhotoUrls
     let links: PhotoLinks
     let likes: Int
+    let description: String?
 
     struct PhotoUrls: Decodable {
         let raw: String
