@@ -2,7 +2,7 @@
 //  UnsplashSearchRequest.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 02.07.2023.
+//  Created by Alex Gav on 20.06.2023.
 //
 
 import Foundation

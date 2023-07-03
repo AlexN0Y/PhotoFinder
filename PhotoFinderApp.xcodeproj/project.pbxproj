@@ -28,6 +28,7 @@
 		DFC4B5292A4502F800F916A2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC4B5272A4502F800F916A2 /* PhotoCell.swift */; };
 		DFC4B52A2A4502F800F916A2 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC4B5282A4502F800F916A2 /* PhotoCell.xib */; };
 		DFC4B52E2A450D3600F916A2 /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC4B52D2A450D3600F916A2 /* MainPagePresenter.swift */; };
+		DFD5AE022A523AD2003B5E48 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD5AE012A523AD2003B5E48 /* CategoryPresenter.swift */; };
 		DFE5C0DC2A47ADC300D1FC19 /* ImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE5C0DB2A47ADC300D1FC19 /* ImageViewController.storyboard */; };
 		DFE5C0DE2A47ADD300D1FC19 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE5C0DD2A47ADD300D1FC19 /* ImageViewController.swift */; };
 		DFFDBD852A3F44B2001922AA /* ChosenCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFDBD842A3F44B2001922AA /* ChosenCategoryViewController.swift */; };
@@ -58,6 +59,7 @@
 		DFC4B5272A4502F800F916A2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		DFC4B5282A4502F800F916A2 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		DFC4B52D2A450D3600F916A2 /* MainPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
+		DFD5AE012A523AD2003B5E48 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		DFE5C0DB2A47ADC300D1FC19 /* ImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewController.storyboard; sourceTree = "<group>"; };
 		DFE5C0DD2A47ADD300D1FC19 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		DFFDBD842A3F44B2001922AA /* ChosenCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChosenCategoryViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				DF151FC32A3E6E840072BE60 /* CategoryViewController.swift */,
 				DF151FC72A3E6EC30072BE60 /* CategoryViewController.storyboard */,
+				DFD5AE012A523AD2003B5E48 /* CategoryPresenter.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				DF0B28912A4CDEF8004528C9 /* UnsplashPhoto.swift in Sources */,
 				DF47F3902A49A05B0080570E /* UIViewController+Extension.swift in Sources */,
 				DF94DF432A43064A00247402 /* PhotosRequest.swift in Sources */,
+				DFD5AE022A523AD2003B5E48 /* CategoryPresenter.swift in Sources */,
 				DFA773FC2A50FB180084DCB7 /* UnsplashSearchRequest.swift in Sources */,
 				DF151FC52A3E6E840072BE60 /* CategoryViewController.swift in Sources */,
 				DF0B288E2A4CD575004528C9 /* MainPagePresenterProtocol.swift in Sources */,
@@ -444,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KZ9J38TUDC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -475,6 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KZ9J38TUDC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoFinderApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -2,7 +2,7 @@
 //  ImageViewController.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 25.06.2023.
+//  Created by Alex Gav on 21.06.2023.
 //
 
 import UIKit

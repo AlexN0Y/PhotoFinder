@@ -2,7 +2,7 @@
 //  MainPageViewProtocol.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 28.06.2023.
+//  Created by Alex Gav on 18.06.2023.
 //
 
 import Foundation

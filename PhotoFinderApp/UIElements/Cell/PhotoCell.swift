@@ -2,7 +2,7 @@
 //  PhotoCell.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 23.06.2023.
+//  Created by Alex Gav on 21.06.2023.
 //
 
 import UIKit
@@ -14,10 +14,7 @@ class PhotoCell: UICollectionViewCell {
             photoView.clipsToBounds = true
         }
     }
-    @IBOutlet private weak var titleLabel: UILabel!
 
-
-    
     func configure(photoData: UnsplashPhoto) {
         loadImage(from: photoData.urls.small) { image in
             if let image = image {
@@ -27,9 +24,6 @@ class PhotoCell: UICollectionViewCell {
             } else {
                 print("error")
             }
-        }
-        DispatchQueue.main.async {
-            self.titleLabel.text = photoData.description
         }
     }
     

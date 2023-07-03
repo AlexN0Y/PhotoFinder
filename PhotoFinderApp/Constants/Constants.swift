@@ -2,7 +2,7 @@
 //  Constants.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 29.06.2023.
+//  Created by Alex Gav on 20.06.2023.
 //
 
 import Foundation

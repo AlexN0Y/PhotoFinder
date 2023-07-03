@@ -2,7 +2,7 @@
 //  UnsplashPhoto.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 29.06.2023.
+//  Created by Alex Gav on 19.06.2023.
 //
 
 import Foundation

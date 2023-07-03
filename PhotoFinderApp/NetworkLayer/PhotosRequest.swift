@@ -26,7 +26,7 @@ struct PhotosRequest: DataRequest {
     }
 
     var queryItems: [String : String] {
-        [:]
+        ["per_page": "30"] 
     }
     
 }
