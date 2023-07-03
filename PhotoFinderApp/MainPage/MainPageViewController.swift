@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 12.06.2023.
+//  Created by Alex Gav on 14.06.2023.
 //
 
 import UIKit
@@ -18,7 +18,6 @@ class MainPageViewController: UIViewController, MainPageView {
         static let categoryViewController = "CategoryViewController"
         static let listImage = "list.bullet"
         static let imageCellIdentifier = "PhotoCell"
-        static let numberOfCells = 30
     }
     
     
@@ -79,7 +78,9 @@ class MainPageViewController: UIViewController, MainPageView {
 
 extension MainPageViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        let _ = searchController.searchBar.text
+        if let searchTerm = searchController.searchBar.text {
+            presenter?.searchPhotos(with: searchTerm)
+        }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -106,7 +107,6 @@ extension MainPageViewController: UICollectionViewDataSource, UICollectionViewDe
             imageVC.photo = photo
             self.navigationController?.pushViewController(imageVC, animated: true)
         }
-
     }
     
 }

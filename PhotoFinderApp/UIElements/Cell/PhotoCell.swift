@@ -2,26 +2,28 @@
 //  PhotoCell.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 23.06.2023.
+//  Created by Alex Gav on 21.06.2023.
 //
 
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet private weak var photoView: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    
+    @IBOutlet private weak var photoView: UIImageView! {
+        didSet {
+            photoView.clipsToBounds = true
+        }
+    }
+
     func configure(photoData: UnsplashPhoto) {
         loadImage(from: photoData.urls.small) { image in
             if let image = image {
                 self.photoView.image = image
+                self.setNeedsLayout()
+                self.layoutIfNeeded()
             } else {
                 print("error")
             }
-        }
-        DispatchQueue.main.async {
-            self.titleLabel.text = "Photo Photo Photo Photo Photo v vPhoto Photo"
         }
     }
     

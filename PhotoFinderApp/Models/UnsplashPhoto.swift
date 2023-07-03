@@ -2,7 +2,7 @@
 //  UnsplashPhoto.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 29.06.2023.
+//  Created by Alex Gav on 19.06.2023.
 //
 
 import Foundation
@@ -15,6 +15,7 @@ struct UnsplashPhoto: Decodable {
     let urls: PhotoUrls
     let links: PhotoLinks
     let likes: Int
+    let description: String?
 
     struct PhotoUrls: Decodable {
         let raw: String

@@ -2,16 +2,17 @@
 //  MainPagePresenter.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 23.06.2023.
+//  Created by Alex Gav on 18.06.2023.
 //
 
 import Foundation
 
 class MainPagePresenter: MainPageViewPresenter {
     
-    weak var view: MainPageView?
-    let networkService = DefaultNetworkService()
-    var photos: [UnsplashPhoto] = []
+    private weak var view: MainPageView?
+    private let networkService = DefaultNetworkService()
+    private var allPhotos: [UnsplashPhoto] = []
+    private var photos: [UnsplashPhoto] = []
 
     required init(view: MainPageView) {
         self.view = view
@@ -23,6 +24,7 @@ class MainPagePresenter: MainPageViewPresenter {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let photos):
+                    self?.allPhotos = photos
                     self?.photos = photos
                     self?.view?.reloadCollectionView()
                 case .failure(let error):
@@ -38,6 +40,15 @@ class MainPagePresenter: MainPageViewPresenter {
     
     func photoAtIndex(_ index: Int) -> UnsplashPhoto? {
         return photos[index]
+    }
+    
+    func searchPhotos(with term: String) {
+            if term.isEmpty {
+                photos = allPhotos
+            } else {
+                photos = allPhotos.filter { ($0.description ?? "").lowercased().contains(term.lowercased()) }
+            }
+            view?.reloadCollectionView()
     }
 }
 

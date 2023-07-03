@@ -2,7 +2,7 @@
 //  ImageViewController.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 25.06.2023.
+//  Created by Alex Gav on 21.06.2023.
 //
 
 import UIKit
@@ -11,6 +11,7 @@ class ImageViewController: UIViewController {
 
     @IBOutlet private weak var photoView: UIImageView!
     var photo: UnsplashPhoto?
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,10 @@ class ImageViewController: UIViewController {
             } else {
                 print("error")
             }
+        }
+        
+        DispatchQueue.main.async {
+            self.descriptionLabel.text = photo.description
         }
         photoView.isUserInteractionEnabled = true
         let interaction = UIContextMenuInteraction(delegate: self)

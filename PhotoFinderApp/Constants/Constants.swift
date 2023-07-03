@@ -2,13 +2,13 @@
 //  Constants.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 29.06.2023.
+//  Created by Alex Gav on 20.06.2023.
 //
 
 import Foundation
 
 enum GlobalConstants {
-    static var accessKey: String? {
+    static var accessKey: String? = {
         guard let plistPath = Bundle.main.path(forResource: "APIKeys", ofType: "plist") else {
             return nil
         }
@@ -31,6 +31,6 @@ enum GlobalConstants {
             print("Error: \(error)")
         }
         return nil
-    }
+    } ()
         
 }

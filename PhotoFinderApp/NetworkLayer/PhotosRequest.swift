@@ -9,8 +9,6 @@ import Foundation
 
 let baseURL = "https://api.unsplash.com"
 
-private let unsplashAPIKey = "api_key"
-
 struct PhotosRequest: DataRequest {
 
     typealias Response = [UnsplashPhoto]
@@ -28,7 +26,7 @@ struct PhotosRequest: DataRequest {
     }
 
     var queryItems: [String : String] {
-        [:]
+        ["per_page": "30"] 
     }
     
 }

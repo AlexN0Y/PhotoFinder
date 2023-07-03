@@ -2,7 +2,7 @@
 //  UIViewController+Extension.swift
 //  PhotoFinderApp
 //
-//  Created by Alex Gav on 26.06.2023.
+//  Created by Alex Gav on 17.06.2023.
 //
 
 import UIKit
